@@ -1,0 +1,32 @@
+matrix1 = matrix(c(7,9,12,2,4,13), nrow=2, ncol=3)
+matrix2 = matrix(c(1,7,12,19,2,8,13,20,3,9,14,21), nrow=3, ncol=4)
+
+matrix3 = matrix1%*%matrix2
+matrix3
+
+
+
+wage = data.frame(
+    id=c(1,2,3,4,5),
+    name=c('Peter','Amu','Ryan','Gary','Michelle'),
+    salary=c(623.30,515.20,611.00,729.00,843.25)
+)
+
+wage
+
+New_col_DF = cbind(wage, department=c('IT', 'finance', 'computer science','math','history'))
+New_col_DF
+
+wage[c(1,3,5),c(2,3)]
+
+x=c('Peter','Gary','Michelle')
+y=c(623.30,729.00,843.25)
+barplot(y, names.arg=x)
+
+max(wage$salary)
+min(wage$salary)
+median(wage$salary)
+
+x=c(843.25,515.2,623.3)
+labels=c('highest salary','lowest salary','median salary')
+pie(x, labels, main = "Salary Stats")
